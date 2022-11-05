@@ -1,0 +1,63 @@
+D:\APP KHACH CHUAN\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.exe.config
+D:\APP KHACH CHUAN\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.exe
+D:\APP KHACH CHUAN\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.pdb
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.AssemblyReference.cache
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.SuggestedBindingRedirects.cache
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.DangKi.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.Form1.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.itemFood.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.itemFoodDonHang.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.LOGIN.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.Properties.Resources.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ShopFood.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.GenerateResource.cache
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.CoreCompileInputs.cache
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP KHACH CHUAN.exe
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP KHACH CHUAN.pdb
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.DONHANG.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ListHoaDon.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.thongTinDonHang.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ItemDatHang.resources
+D:\APP KHACH CHUAN\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.MENUThemItem.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.exe.config
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.exe
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.pdb
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.DangKi.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.DONHANG.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.Form1.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ItemDatHang.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.itemFood.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.itemFoodDonHang.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ListHoaDon.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.LOGIN.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.MENUThemItem.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.Properties.Resources.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ShopFood.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.thongTinDonHang.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP KHACH CHUAN.exe
+C:\Users\Admin\Downloads\APPFOOD-Duy (1)\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP KHACH CHUAN.pdb
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.exe.config
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.exe
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\bin\Debug\APP KHACH CHUAN.pdb
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.DangKi.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.DONHANG.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.Form1.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ItemDatHang.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.itemFood.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.itemFoodDonHang.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ListHoaDon.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.LOGIN.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.MENUThemItem.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.Properties.Resources.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.ShopFood.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP_KHACH_CHUAN.thongTinDonHang.resources
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP nhân viên.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP KHACH CHUAN.exe
+C:\Users\Admin\Downloads\APPFOOD-Duy\APPFOOD-Duy\APP KHACH CHUAN\obj\Debug\APP KHACH CHUAN.pdb

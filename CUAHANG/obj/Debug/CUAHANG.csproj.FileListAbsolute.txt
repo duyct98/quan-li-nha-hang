@@ -1,0 +1,17 @@
+D:\APP KHACH CHUAN\CUAHANG\bin\Debug\CUAHANG.exe.config
+D:\APP KHACH CHUAN\CUAHANG\bin\Debug\CUAHANG.exe
+D:\APP KHACH CHUAN\CUAHANG\bin\Debug\CUAHANG.pdb
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.csproj.AssemblyReference.cache
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.csproj.SuggestedBindingRedirects.cache
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.CUAHANG.resources
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.itemFood.resources
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.Properties.Resources.resources
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.csproj.GenerateResource.cache
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.csproj.CoreCompileInputs.cache
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.exe
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.pdb
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.MenuThemItemFOOD.resources
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.ThemMon.resources
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.itemOrder.resources
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.ORDER.resources
+D:\APP KHACH CHUAN\CUAHANG\obj\Debug\CUAHANG.itemDonHang.resources
