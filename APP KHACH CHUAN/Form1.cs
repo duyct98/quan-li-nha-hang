@@ -17,8 +17,6 @@ namespace APP_KHACH_CHUAN
     public partial class Form1 : Form
     {
 
-        public static int cuaHangID { get; set; }
-        public static int khachid { get; set; }
 
         public int getIDShop()
         {
@@ -57,27 +55,24 @@ namespace APP_KHACH_CHUAN
             command.CommandText = codesql;
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
-
             while (reader.Read())
             {
                 data = reader.GetValue(0).ToString();
 
-
-
             }
 
-            conn.Close();
+
             reader.Close();
+            conn.Close();
             return data;
 
         }
 
-
         public void Form1_Load(object sender, EventArgs e)
         {
             btnBack.Hide();
-            btnBack_Click(sender, e);
-            refreshHoaDon();
+            
+            
             thongTinDonHang.BtnHoanThanhDonHang_Click += BtnHoanThanhDonHang_Click;
             LoadHoaDon();
             groupMenu.Show();
@@ -86,7 +81,13 @@ namespace APP_KHACH_CHUAN
             groupMatKhauQuanLY.Hide();
             btnBack_Click(sender, e);
             MENUThemItem.Button2_Click += Button2_Click;
+            itemFood.BtnXoa_Click += BtnXoa_Click;
 
+        }
+        public void BtnXoa_Click(object sender, EventArgs e)
+        {
+            lamSachDuLieuForm();
+            reloadForm();
         }
         public void Button2_Click(object sender, EventArgs e)
         {
@@ -109,9 +110,9 @@ namespace APP_KHACH_CHUAN
 
         }
 
-        public void setKhachId()
+        public void setNhanVienID()
         {
-            khachid = Convert.ToInt32(Laydatasql("select khachid from tbl_khach where khachid= '" + LOGIN.taikhoan + "'"));
+            NhanVienID = Convert.ToInt32(Laydatasql("select NhanVienID from tbl_nhanvien where NhanVienID= '" + LOGIN.taikhoan + "'"));
         }
         List<ListHoaDon> listhoadon = new List<ListHoaDon>();
         public void refreshHoaDon()
@@ -119,7 +120,7 @@ namespace APP_KHACH_CHUAN
             listhoadon.Clear();
             panelHoaDon.Controls.Clear();
             int donhangid = 1000;
-            for (int i = 0; i < Convert.ToInt32(Laydatasql("select Count(donhangid) from tbl_donhang ")); i++)
+            for (int i = 0; i < Convert.ToInt32(Laydatasql("select Count(donhangid) from tbl_donhang  where trangthai = N'Đang thực hiện'")); i++)
             {
 
                 while (true)
@@ -147,7 +148,7 @@ namespace APP_KHACH_CHUAN
         public void btnThanhToan_Click(object sender, EventArgs e)
         {
 
-            int donhangid = Convert.ToInt32(Laydatasql("insert tbl_DonHang(NgayBan,KhachID) values ('" + dateTimePicker2.Value.ToString("MM-dd-yyyy HH:mm:ss") + "'," + khachid + ") SELECT @@IDENTITY asLastID"));
+                        int donhangid = Convert.ToInt32(Laydatasql("insert tbl_DonHang(NgayBan,NhanVienID,trangthai) values ('" + dateTimePicker2.Value.ToString("MM-dd-yyyy HH:mm:ss") + "'," + NhanVienID + ",N'Đang thực hiện') SELECT @@IDENTITY asLastID"));
 
             for (int i = 0; i < itemFoodDonHang.listDatHang.Count; i++)
             {
@@ -273,43 +274,8 @@ namespace APP_KHACH_CHUAN
         }
         private void PictureBox1_Click(object sender, EventArgs e)
         {
-            homePanel.Controls.Clear();
-
-            itemFood.listfood.Clear();
-            itemFoodDonHang.listDatHang.Clear();
-
-            itemFood.dem = 1;
-
-            for (int i = 0; i < Convert.ToInt32(Laydatasql(@"select Count(HangID) from tbl_HangBan where cuahangid= '" + getIDShop() + "'")); i++)
-            {
-                itemFood.listfood.Add(new itemFood());
-                itemFood.listfood[i].dataFood();
-
-                itemFood.listfood[i].BtnThem_Click += new System.EventHandler(itemFood_BtnThem_Click);
-                itemFood.listfood[i].BtnHuy_Click += new System.EventHandler(itemFood_BtnHuy_Click);
-
-                itemFoodDonHang.listDatHang.Add(new itemFoodDonHang());
-                itemFoodDonHang.listDatHang[i].setIDFood(itemFood.listfood[i].getIDFood());
-                itemFoodDonHang.listDatHang[i].setTenFood(itemFood.listfood[i].getTenFood());
-                itemFoodDonHang.listDatHang[i].SetGiaFood(itemFood.listfood[i].getGiaFood());
-
-                itemFood.listfood[i].count = i;
-                itemFoodDonHang.listDatHang[i].count = i;
-
-
-                homePanel.Controls.Add(itemFood.listfood[i]);
 
             }
-
-            for (int i = 0; i < Convert.ToInt32(Laydatasql(@"select Count(CuaHangID) from tbl_CuaHang")); i++)
-            {
-
-                ShopFood.listShopFood[i].PictureBox1_Click -= PictureBox1_Click;
-
-
-
-            }
-        }
         public static event EventHandler BtnBack_Click;
         public void btnBack_Click(object sender, EventArgs e)
         {   
@@ -555,9 +521,9 @@ namespace APP_KHACH_CHUAN
                 //Lưu lại dòng dữ liệu vừa kích chọn
                 DataGridViewRow row = this.dataHoaDon.Rows[e.RowIndex];
                 //Đưa dữ liệu vào textbox
-                txtdonhangid.Text = row.Cells[0].Value.ToString();
+                txtHoaDonID.Text = row.Cells[0].Value.ToString();
                 txtTongHoaDon.Text = Convert.ToInt32(row.Cells[1].Value).ToString("0,000") + " VND";
-                txtNgayBan.Text = row.Cells[2].Value.ToString();
+                txtNgayBan.Text=row.Cells[2].Value.ToString();
 
                 LoadThongTinHoaDon();
                 //Không cho phép sửa trường STT
@@ -599,28 +565,28 @@ namespace APP_KHACH_CHUAN
             string sql = null;
             if (comboBox1.SelectedIndex == 0)
             {
-                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',dh.NgayBan\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\ngroup by dh.DonHangID,dh.NgayBan \r\norder by 'tongbill' asc";  // lay het du lieu trong bang sinh vien
+                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',dh.NgayBan,dh.trangthai\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\ngroup by dh.DonHangID,dh.NgayBan,dh.trangthai \r\norder by 'tongbill' asc";  // lay het du lieu trong bang sinh vien
 
             }
             if (comboBox1.SelectedIndex == 1)
             {
-                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',dh.NgayBan\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\ngroup by dh.DonHangID,dh.NgayBan \r\norder by 'tongbill' desc";  // lay het du lieu trong bang sinh vien
+                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',dh.NgayBan,dh.trangthai\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\ngroup by dh.DonHangID,dh.NgayBan,dh.trangthai \r\norder by 'tongbill' desc";  // lay het du lieu trong bang sinh vien
 
             }
 
             if (comboBox1.SelectedIndex == 2)
             {
-                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',NgayBan\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\nwhere DAY(NgayBan)= DAY(GETDATE())\r\ngroup by dh.DonHangID,ngayban ";  // lay het du lieu trong bang sinh vien
+                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',NgayBan,dh.trangthai\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\nwhere DAY(NgayBan)= DAY(GETDATE())\r\ngroup by dh.DonHangID,ngayban,dh.trangthai ";  // lay het du lieu trong bang sinh vien
 
             }
             if (comboBox1.SelectedIndex == 3)
             {
-                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',NgayBan\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\nwhere MONTH(NgayBan)> MONTH(GETDATE())-1\r\ngroup by dh.DonHangID,ngayban";  // lay het du lieu trong bang sinh vien
+                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',NgayBan,dh.trangthai\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\nwhere MONTH(NgayBan)> MONTH(GETDATE())-1\r\ngroup by dh.DonHangID,ngayban,dh.trangthai";  // lay het du lieu trong bang sinh vien
 
             }
             if (comboBox1.SelectedIndex == 4)
             {
-                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',NgayBan\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\nwhere MONTH(NgayBan)> MONTH(GETDATE())-3\r\ngroup by dh.DonHangID,ngayban";  // lay het du lieu trong bang sinh vien
+                sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',NgayBan,dh.trangthai\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\nwhere MONTH(NgayBan)> MONTH(GETDATE())-3\r\ngroup by dh.DonHangID,ngayban,dh.trangthai";  // lay het du lieu trong bang sinh vien
 
             }
             SqlConnection cnn = new SqlConnection(strcon);
@@ -636,7 +602,7 @@ namespace APP_KHACH_CHUAN
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            string sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',dh.NgayBan\r\nfrom tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\nwhere DAY(NgayBan) = " + dateTimePicker1.Value.Day + " and MONTH(NgayBan) = " + dateTimePicker1.Value.Month + "  and YEAR(NgayBan) = " + dateTimePicker1.Value.Year + "group by dh.DonHangID,dh.NgayBan \r\n";  // lay het du lieu trong bang sinh vien
+            string sql = "select dh.DonHangID,sum(DonGia*SoLuong)as 'tongbill',dh.NgayBan,dh.trangthai from tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID \r\nwhere DAY(NgayBan) = " + dateTimePicker1.Value.Day + " and MONTH(NgayBan) = " + dateTimePicker1.Value.Month + "  and YEAR(NgayBan) = " + dateTimePicker1.Value.Year + "group by dh.DonHangID,dh.NgayBan,dh.trangthai \r\n";  // lay het du lieu trong bang sinh vien
             SqlConnection cnn = new SqlConnection(strcon);
             cnn.Open();
             SqlCommand com = new SqlCommand(sql, cnn); //bat dau truy van
@@ -658,7 +624,7 @@ namespace APP_KHACH_CHUAN
             
             
                     MENUThemItem themitem = new MENUThemItem();
-                    themitem.Show();
+                    themitem.ShowDialog();
                     groupMatKhauQuanLY.Hide();
                 
             

@@ -32,8 +32,11 @@ namespace APP_KHACH_CHUAN
        
         private void ListHoaDon_Load(object sender, EventArgs e)
         {
+            
             txtHoaDonID.Text = donHangID.ToString();
-            txtGiaFood.Text = (Convert.ToInt32(f1.Laydatasql("select sum(DonGia*SoLuong) as 'tongbill' from tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID where dh.donhangid = " + donHangID + ""))).ToString("0,000") + " VND" ;
+                txtGiaFood.Text = "A1111";
+                txtGiaFood.Text = f1.Laydatasql("select sum(DonGia*SoLuong) as 'tongbill' from tbl_hang h inner join tbl_hangban hb on hb.hangid = h.hangid inner join tbl_DonHang dh on dh.DonHangID = h.DonHangID where dh.donhangid = " + donHangID + "");
+
 
         }
     }

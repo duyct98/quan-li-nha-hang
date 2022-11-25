@@ -98,58 +98,7 @@ namespace APP_KHACH_CHUAN
             return Convert.ToDouble(txtGiaFood.Text);
         }
        
-        public void dataFood()
-        {
-            while (true)
-            {
 
-                
-                    
-
-
-                    idFood = Convert.ToInt32(f1.Laydatasql("select HangID from tbl_hangban where HangID='" + dem + "' and cuahangid= '"+ f1.getIDShop() + "'" ));
-                    txtTenFood.Text = f1.Laydatasql("select TenHang from tbl_hangban where hangid='" + dem + "'and cuahangid= '" + f1.getIDShop() + " '");
-                    tenFood = txtTenFood.Text;
-                    giaFood = Convert.ToDouble(f1.Laydatasql("select DonGia from tbl_hangban where hangid='" + dem + "'and cuahangid= '"+ f1.getIDShop() + "'"));
-                    txtGiaFood.Text = Convert.ToInt32(giaFood).ToString("0,000") + " VND";
-               
-               
-
-                dem++;
-
-
-
-
-
-                if (tenFood != ""&& tenFood != null)
-                {
-                    string ss = "SELECT anh from tbl_hangban where HangID = '" + idFood + "'and cuahangid= '"+ f1.getIDShop() + " '";
-
-                    SqlConnection conn = new SqlConnection(f1.strcon);
-                    conn.Open();
-                    SqlCommand command = new SqlCommand(ss, conn);
-
-                    SqlDataReader reader = command.ExecuteReader();
-                    reader.Read();
-                    if (reader.HasRows)
-                    {
-                        byte[] img = (byte[])(reader[0]);
-
-                        MemoryStream ms = new MemoryStream(img);
-
-                        picturebox1.BackgroundImage = Image.FromStream(ms);
-
-                    }
-
-                    break;
-                }
-                
-
-
-
-            }
-            
-        }
         public void getDataFood(string data) // 
         {
             
@@ -240,7 +189,6 @@ namespace APP_KHACH_CHUAN
 
         public void doiMauItemFood(int data1, int data2, int data3)
         {
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(data1)))), ((int)(((byte)(data2)))), ((int)(((byte)(data3)))));
 
         }
 
@@ -261,6 +209,7 @@ namespace APP_KHACH_CHUAN
 
         public void itemFood_Load(object sender, EventArgs e)
         {
+            btnXoa.Hide();
             btnSua.Hide();
             btnHuy.Show();
             btnThem.Show();
